@@ -3,10 +3,11 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    color: #333;
 }
 
 header {
-    background-color: #333;
+    background: linear-gradient(90deg, #833ab4, #fd1d1d, #fcb045);
     color: #fff;
     padding: 10px 0;
 }
@@ -39,10 +40,15 @@ header nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #ddd;
 }
 
 section {
-    padding: 40px 0;
+    padding: 60px 0;
 }
 
 section .container {
@@ -51,38 +57,50 @@ section .container {
     padding: 0 20px;
     background-color: #fff;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
 section h1, section h2 {
     color: #333;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .sobre p {
     font-size: 1.2em;
     color: #666;
+    text-align: center;
+    line-height: 1.6;
 }
 
 .servicos ul {
     list-style: none;
     padding: 0;
+    text-align: center;
 }
 
 .servicos ul li {
     background: #f4f4f4;
     margin: 10px 0;
     padding: 15px;
-    border-left: 5px solid #333;
+    border-left: 5px solid #833ab4;
     font-size: 1.1em;
+    transition: background 0.3s;
+}
+
+.servicos ul li:hover {
+    background: #ddd;
 }
 
 .contato form {
     display: flex;
     flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .contato form input, .contato form textarea {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     padding: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -92,15 +110,21 @@ section h1, section h2 {
 .contato form button {
     padding: 15px;
     border: none;
-    background-color: #333;
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
     color: #fff;
     font-size: 1em;
     border-radius: 5px;
     cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contato form button:hover {
+    background: linear-gradient(90deg, #0072ff, #00c6ff);
 }
 
 .contato .info-contato {
     margin-top: 20px;
+    text-align: center;
 }
 
 .contato .info-contato p {
@@ -111,13 +135,18 @@ section h1, section h2 {
 .contato .info-contato a {
     color: #333;
     text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contato .info-contato a:hover {
+    color: #0072ff;
 }
 
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 10px 0;
+    padding: 20px 0;
 }
 
 footer p {
@@ -136,5 +165,13 @@ footer p {
 
     header nav ul li {
         margin: 10px 0;
+    }
+
+    section {
+        padding: 30px 0;
+    }
+
+    .contato form {
+        width: 100%;
     }
 }
